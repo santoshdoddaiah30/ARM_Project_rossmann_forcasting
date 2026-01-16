@@ -10,7 +10,7 @@ store = pd.read_csv("store.csv", low_memory=False)
 train = train.merge(store, on="Store", how="left")
 test = test.merge(store, on="Store", how="left")
 
-print("✅ Before cleaning:")
+print("  Before cleaning:")
 print("Train shape:", train.shape)
 print("Test shape:", test.shape)
 
@@ -62,14 +62,14 @@ test["Open"].fillna(1, inplace=True)
 # Rows where Open==0 usually have Sales==0 and don't help demand prediction
 train = train[train["Open"] == 1]
 
-print("\n✅ After cleaning:")
+print("\n  After cleaning:")
 print("Train shape:", train.shape)
 print("Test shape:", test.shape)
 
-print("\n❗ Missing values after cleaning (Train):")
+print("\n  Missing values after cleaning (Train):")
 print(train.isnull().sum())
 
-print("\n❗ Missing values after cleaning (Test):")
+print("\n  Missing values after cleaning (Test):")
 print(test.isnull().sum())
 
 # ----------------------------
@@ -78,4 +78,4 @@ print(test.isnull().sum())
 train.to_csv("train_clean.csv", index=False)
 test.to_csv("test_clean.csv", index=False)
 
-print("\n✅ Saved files: train_clean.csv and test_clean.csv")
+print("\n  Saved files: train_clean.csv and test_clean.csv")
