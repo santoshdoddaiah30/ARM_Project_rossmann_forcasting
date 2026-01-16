@@ -182,5 +182,5 @@ rmse = np.sqrt(mean_squared_error(y_valid, y_pred))
 mae = mean_absolute_error(y_valid, y_pred)
 r2 = r2_score(y_valid, y_pred)
 
-print("✅ Figures created successfully (10 PNG files).")
-print("✅ Validation metrics (XGBoost): RMSE =", rmse, "| MAE =", mae, "| R2 =", r2)
+print(" Figures created successfully (10 PNG files).")
+print(" Validation metrics (XGBoost): RMSE =", rmse, "| MAE =", mae, "| R2 =", r2)
