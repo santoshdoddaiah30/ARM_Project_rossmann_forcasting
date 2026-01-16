@@ -30,8 +30,8 @@ X_test = pd.get_dummies(X_test, columns=cat_cols, drop_first=True)
 # Align columns
 X, X_test = X.align(X_test, join="left", axis=1, fill_value=0)
 
-print("✅ Train features shape:", X.shape)
-print("✅ Test features shape:", X_test.shape)
+print(" Train features shape:", X.shape)
+print(" Test features shape:", X_test.shape)
 
 # -----------------------------
 # 2) Train final model on full training set
@@ -66,5 +66,5 @@ submission = pd.DataFrame({
 
 submission.to_csv("submission.csv", index=False)
 
-print("\n✅ submission.csv created successfully!")
+print("\n submission.csv created successfully!")
 print(submission.head())
