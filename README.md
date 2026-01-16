@@ -51,8 +51,27 @@ Please download the dataset from Kaggle and place it in a local `data/` folder w
 
 ---
 
-## How to Run (For Team Members)
+## How to Run 
 
-### 1) Install Dependencies
+In Terminal: 
+
+### 1) Clone Repository
 ```bash
-pip install pandas numpy matplotlib scikit-learn xgboost
+git clone https://github.com/santoshdoddaiah30/ARM_Project_rossmann_forcasting.git
+```
+
+### 2) Change Directory
+```bash
+cd ARM_Project_rossmann_forcasting
+```
+
+### 3) Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4) Run the project file
+```bash
+python pipeline.py
+```
+
