@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ```bash
 python scripts/pipeline.py
 ```
-### 50 Run Dashboard
+### 5) Run Dashboard
 ```bash
 streamlit run scripts/dashboard.py
 ```
