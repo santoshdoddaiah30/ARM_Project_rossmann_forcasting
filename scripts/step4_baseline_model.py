@@ -22,8 +22,8 @@ cutoff_date = train["Date"].max() - pd.Timedelta(days=42)
 train_part = train[train["Date"] <= cutoff_date].copy()
 valid_part = train[train["Date"] > cutoff_date].copy()
 
-print("✅ Train part:", train_part.shape)
-print("✅ Valid part:", valid_part.shape)
+print(" Train part:", train_part.shape)
+print(" Valid part:", valid_part.shape)
 
 # -----------------------------
 # 2) Target variable
@@ -50,7 +50,7 @@ X_valid = pd.get_dummies(X_valid, columns=cat_cols, drop_first=True)
 # Align validation to train columns
 X_train, X_valid = X_train.align(X_valid, join="left", axis=1, fill_value=0)
 
-print("✅ Features after encoding:", X_train.shape[1])
+print(" Features after encoding:", X_train.shape[1])
 
 # -----------------------------
 # 5) Train baseline model
@@ -67,6 +67,6 @@ y_pred = model.predict(X_valid)
 rmse = np.sqrt(mean_squared_error(y_valid, y_pred))
 mae = mean_absolute_error(y_valid, y_pred)
 
-print("\n📌 BASELINE MODEL RESULTS (Linear Regression)")
-print("✅ RMSE:", rmse)
-print("✅ MAE:", mae)
+print("\n BASELINE MODEL RESULTS (Linear Regression)")
+print(" RMSE:", rmse)
+print(" MAE:", mae)
