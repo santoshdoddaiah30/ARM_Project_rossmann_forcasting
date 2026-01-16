@@ -32,7 +32,7 @@ X_valid = pd.get_dummies(X_valid, columns=cat_cols, drop_first=True)
 # Align columns
 X_train, X_valid = X_train.align(X_valid, join="left", axis=1, fill_value=0)
 
-print("✅ Features:", X_train.shape[1])
+print(" Features:", X_train.shape[1])
 
 # -----------------------------
 # Random Forest Model
@@ -53,6 +53,6 @@ y_pred = rf.predict(X_valid)
 rmse = np.sqrt(mean_squared_error(y_valid, y_pred))
 mae = mean_absolute_error(y_valid, y_pred)
 
-print("\n📌 MODEL RESULTS (Random Forest)")
-print("✅ RMSE:", rmse)
-print("✅ MAE:", mae)
+print("\n MODEL RESULTS (Random Forest)")
+print(" RMSE:", rmse)
+print(" MAE:", mae)
