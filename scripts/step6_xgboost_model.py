@@ -32,7 +32,7 @@ X_valid = pd.get_dummies(X_valid, columns=cat_cols, drop_first=True)
 # Align
 X_train, X_valid = X_train.align(X_valid, join="left", axis=1, fill_value=0)
 
-print("✅ Features:", X_train.shape[1])
+print(" Features:", X_train.shape[1])
 
 # -----------------------------
 # XGBoost Model
@@ -56,6 +56,6 @@ y_pred = xgb.predict(X_valid)
 rmse = np.sqrt(mean_squared_error(y_valid, y_pred))
 mae = mean_absolute_error(y_valid, y_pred)
 
-print("\n📌 MODEL RESULTS (XGBoost)")
-print("✅ RMSE:", rmse)
-print("✅ MAE:", mae)
+print("\n MODEL RESULTS (XGBoost)")
+print(" RMSE:", rmse)
+print(" MAE:", mae)
