@@ -21,18 +21,18 @@ def create_date_features(df):
 train = create_date_features(train)
 test = create_date_features(test)
 
-print("✅ Feature Engineering Done!")
+print(" Feature Engineering Done!")
 print("Train shape:", train.shape)
 print("Test shape:", test.shape)
 
-print("\n🔍 New columns added:")
+print("\n New columns added:")
 print(["Year", "Month", "Day", "WeekOfYear", "DayOfYear", "IsWeekend"])
 
-print("\n🔍 Train preview:")
+print("\n Train preview:")
 print(train.head())
 
 # Save new feature datasets
 train.to_csv("train_features.csv", index=False)
 test.to_csv("test_features.csv", index=False)
 
-print("\n✅ Saved files: train_features.csv and test_features.csv")
+print("\n Saved files: train_features.csv and test_features.csv")
